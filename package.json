@@ -1,0 +1,16 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "erc20:loc:dep": "npx hardhat ignition deploy ./ignition/modules/MyERC20Token.ts --network localhost",
+    "erc20:amoy:dep": "npx hardhat ignition deploy ./ignition/modules/MyERC20Token.ts --network amoy --verify",
+    "erc721:loc:dep": "npx hardhat ignition deploy ./ignition/modules/MyERC721Token.ts --network localhost",
+    "erc721:amoy:dep": "npx hardhat ignition deploy ./ignition/modules/MyERC721Token.ts --network amoy --verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
