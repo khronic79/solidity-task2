@@ -178,14 +178,16 @@ contract MyERC721Token is ERC721, IERC721Errors {
         _;
     }
 
-    function safeMint(
+    function saveMint(
         address to,
         string memory uri
-    ) public onlyOwner  {
+    ) public onlyOwner {
         uint256 tokenId = uint256(keccak256(abi.encodePacked(block.timestamp, _nextId)));
         _tokenURIs[tokenId] = uri;
         _update(to, tokenId, address(0));
         _nextId++;
+        _checkOnERC721Received(msg.sender, address(0), to, tokenId, "");
+        emit CreateToken(to, tokenId);
     }
 
     function _isContract(

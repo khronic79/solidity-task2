@@ -10,6 +10,8 @@ interface ERC721 /* is ERC165 */ {
 
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 
+    event CreateToken(address indexed owner, uint256 indexed _tokenId);
+
     function balanceOf(address _owner) external view returns (uint256);
 
     function ownerOf(uint256 _tokenId) external view returns (address);

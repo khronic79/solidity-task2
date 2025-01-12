@@ -16,7 +16,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     amoy: {
-      url: `https://polygon-amoy.infura.io/v3/6c3f5b8bc9e14265b21c4fbce8b51a26`,
+      url: `https://polygon-amoy.infura.io/v3/` + process.env.INFURA_API_KEY,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 80002,
     },
