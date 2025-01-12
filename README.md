@@ -28,4 +28,5 @@ https://amoy.polygonscan.com/address/0x6f05a50BA60A419F0E3AAFefaA2DE296a0911EcE
 Переделал контракт. Добавил в mint событие, а то не получалось вытащить номер токена. Есть ошибка в названии функции надо было назвать safeMint, назвал saveMint, не стал исправлять и передеплоивать.
 https://amoy.polygonscan.com/address/0x38E8a2a03BF9BF54aBF3Add1DEFCd31E4b822df3
 1. В скрипте mintERC721Token.ts создается новый токен и сразу выдается approve на адрес 0x2317D87e46691ECc6203514A4c43fd806db281ff. Ниже изображение вывода консоли при запуске скрипта в крайний раз.
+
 ![alt text](image.png)
